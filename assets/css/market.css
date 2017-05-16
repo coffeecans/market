@@ -1864,7 +1864,7 @@ color: #828282;
 
 .ui.table thead th {
     cursor: auto;
-    background: #F9FAFB;
+    background: #FAFAFA;
     text-align: inherit;
     color: #828282;
     padding: 16px 20px;
@@ -1874,6 +1874,11 @@ color: #828282;
     text-transform: none;
     border-bottom: none;
     border-left: none;
+}
+
+.ui.selectable.table tbody tr:hover, .ui.table tbody tr td.selectable:hover {
+    background: #F9F9F9 !important;
+    color: #202020 !important;
 }
 
 .ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th {
