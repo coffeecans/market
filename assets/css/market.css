@@ -845,6 +845,16 @@ a:hover {
   background-image: '';
 }
 
+.ui.button:disabled, .ui.buttons .disabled.button, .ui.disabled.active.button, .ui.disabled.button, .ui.disabled.button:hover {
+    cursor: default;
+    opacity: 1!important;
+    background-image: none!important;
+    box-shadow: none!important;
+    pointer-events: none!important;
+    background-color:#E8E8E8!important;
+    color:#828282!important;
+}
+
 /*--- Yellow ---*/
 
 .ui.yellow.buttons .button,
@@ -1864,7 +1874,7 @@ color: #828282;
 
 .ui.table thead th {
     cursor: auto;
-    background: #FAFAFA;
+    background: #f7f7f7;
     text-align: inherit;
     color: #828282;
     padding: 16px 20px;
@@ -1877,7 +1887,7 @@ color: #828282;
 }
 
 .ui.selectable.table tbody tr:hover, .ui.table tbody tr td.selectable:hover {
-    background: #F9F9F9 !important;
+    background: #f7f7f7 !important;
     color: #202020 !important;
 }
 
@@ -1896,10 +1906,62 @@ color: #828282;
 }
 
 .ui.basic.table th {
-    background: #F9FAFB;
+    background: #f7f7f7;
     border-left: none;
 }
 
 .ui.basic.table td {
     background: transparent;
+}
+
+
+/*******************************
+            Card
+*******************************/
+
+.ui.cards > .card, .ui.card {
+    max-width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 420px;
+    min-height: 0px;
+    background: #FFFFFF;
+    padding: 0em;
+    border: none;
+    border-radius: 4px;
+    /* Rectangle 49: */
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.10);
+    -webkit-transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+    transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    transition: box-shadow 0.1s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+    z-index: '';
+}
+
+.ui.cards > .card > .content, .ui.card > .content
+{
+  padding: 30px;
+}
+
+.ui.cards > .card > .content > .header:not(.ui), .ui.card > .content > .header:not(.ui) {
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0px!important;
+    font-size: 15px;
+    margin-top: 30px;
+    line-height: 20px;
+}
+
+.ui.cards > .card > .content > .meta + .description, .ui.cards > .card > .content > .header + .description, .ui.card > .content > .meta + .description, .ui.card > .content > .header + .description {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 18px;
 }

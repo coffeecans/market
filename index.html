@@ -13,6 +13,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css/form.css">
   <link rel="stylesheet" type="text/css" href="assets/css/label.css">
   <link rel="stylesheet" type="text/css" href="assets/css/table.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/divider.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/card.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
+
   <link rel="stylesheet" type="text/css" href="assets/css/market.css">
 
   <script src="assets/library/jquery.min.js"></script>
@@ -24,9 +28,9 @@
 <div class="ui container">
   <h1></h1>
   <div class="ui center aligned header"><img src="assets/img/logo.png"></div>
-  <h1 class="ui dividing header">Текст</h1>
+  <h1 class="ui dividing header">Текст и цвет</h1>
 
-  <div class="ui three column stackable grid">
+  <div class="ui two column stackable grid">
   <div class="column">
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -34,26 +38,44 @@
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <p>Южная Швеция — край пустынных пляжей, уютных городков, органических ферм и новомодных ресторанов.</p>
-  </div>
-  <div class="column">
+    <div class="ui hidden divider"></div>
     <h2><strong>Заголовок</strong></h2>
     <p>Южная Швеция — край пустынных <a href="#">пляжей</a>, уютных городков, <strong>органических ферм</strong> и новомодных ресторанов.</p>
   </div>
-    <div class="column">
+  <div class="column">
       <style>
       .color.grid .column {
         margin: 0.5em;
         width: 50px;
         height: 50px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       }
       </style>
       <div class="ui one column stackable padded middle aligned centered color grid">
-        <div class="black column">#020202</div>
-        <div class="blue column"> #4b4bd8</div>
-        <div class="grey column">#828282</div>
-        <div class="green column">#63b026</div>
-        <div class="red column">#f54742</div>
-        <div class="yellow column">#ffdd55</div>
+        <div class="three column row">
+          <div class="black column">#020202</div>
+          <div class=" column" style="background-color:#f7f7f7;">#f7f7f7</div>
+        </div>
+        <div class="three column row">
+          <div class="blue column">#4b4bd8</div>
+          <div class=" column" style="background-color:#e8e8e8;"> #e8e8e8</div>
+        </div>
+        <div class="three column row">
+          <div class="grey column">#828282</div>
+          <div class=" column" style="background-color:#e3e3e3;">#e3e3e3</div>
+        </div>
+        <div class="three column row">
+          <div class="green column">#63b026</div>
+          <div class=" column" style="background-color:#d8d8d8;">#d8d8d8</div>
+        </div>
+        <div class="three column row">
+          <div class="red column">#f54742</div>
+          <div class=" column" style="background-color:#a9a9a9;">#a9a9a9</div>
+        </div>
+        <div class="three column row">
+          <div class="yellow column">#ffdd55</div>
+        </div>
       </div>
     </div>
   </div>
@@ -63,10 +85,12 @@
     <div class="column">
         <button class="ui small button">Размер S</button>
         <button class="ui large button">Размер M</button>
+        <button class="ui disabled large button">Размер M</button>
     </div>
     <div class="column">
         <button class="yellow ui small button">Размер S</button>
         <button class="yellow ui large button">Размер M</button>
+          <button class="yellow ui disabled large button">Размер M</button>
     </div>
   </div>
 
@@ -192,7 +216,30 @@
           </table>
         </div>
       </div>
+      <h1 class="ui dividing header">Модальное окно</h1>
 
+      <!-- <div class="ui test button">test</div>
+      <div class="ui modal">
+        <div class="header">Header</div>
+        <div class="content">
+          <p></p>
+        </div>
+        <div class="actions">
+          <div class="ui approve button">Approve</div>
+          <div class="ui button">Neutral</div>
+          <div class="ui cancel button">Cancel</div>
+      </div> -->
+
+      <div class="ui card">
+        <div class="content">
+          <div class="header">Магазин отключен от программы из-за проблем качества</div>
+        <div class="description">Магазин временно отключен от программы «Заказ на Маркете» из-за проблем качества. Подробности можно найти в увеомлении, которое мы отправили вам по почте.</div>
+        </div>
+      </div>
+
+      <div class="ux hidden divider"></div>
+      <div class="ux hidden divider"></div>
+      <div class="ux hidden divider"></div>
 </div>
 
 <script>
@@ -202,8 +249,10 @@ $('.ui.dropdown')
 $('.ui.checkbox')
   .checkbox()
 ;
+// $('.ui.modal')
+//   .modal('attach events', '.test.button'§, 'show')
+// ;
 </script>
-
 </body>
 
 </html>
