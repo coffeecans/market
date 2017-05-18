@@ -1965,3 +1965,25 @@ color: #828282;
     font-size: 13px;
     line-height: 18px;
 }
+
+.ui.card > .close {
+  color: #828282;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  padding: 0;
+  display: block;
+  line-height: 11px;
+  margin: 0;
+}
+
+.ui.card .close:before {
+    content: "\f00d";
+    font-size: 14px;
+    /* line-height: 6px; */
+}
