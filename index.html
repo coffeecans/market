@@ -9,6 +9,7 @@
   <!-- Site Properties -->
   <title>Yandex Market Partner</title>
 
+<link rel="stylesheet" type="text/css" href="assets/css/transition.css">
   <link rel="stylesheet" type="text/css" href="assets/css/grid.css">
   <link rel="stylesheet" type="text/css" href="assets/css/form.css">
   <link rel="stylesheet" type="text/css" href="assets/css/label.css">
@@ -16,12 +17,15 @@
   <link rel="stylesheet" type="text/css" href="assets/css/divider.css">
   <link rel="stylesheet" type="text/css" href="assets/css/card.css">
   <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/dimmer.css">
   <link rel="stylesheet" type="text/css" href="assets/css/icon.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
 
   <link rel="stylesheet" type="text/css" href="assets/css/market.css">
 
   <script src="assets/library/jquery.min.js"></script>
   <script src="assets/js/semantic.js"></script>
+  <script src="assets/js/popup.js"></script>
 
 </head>
 <body>
@@ -219,20 +223,21 @@
       </div>
       <h1 class="ui dividing header">Модальное окно</h1>
 
-      <!-- <div class="ui test button">test</div>
-      <div class="ui modal">
-        <div class="header">Header</div>
-        <div class="content">
-          <p></p>
+      <button class="ui large modalBtn button">Модальное окно</button>
+
+      <div class="ui small modal">
+        <i class="close icon"></i>
+        <div class="header">
+          Магазин отключен от программы из-за проблем качества
         </div>
-        <div class="actions">
-          <div class="ui approve button">Approve</div>
-          <div class="ui button">Neutral</div>
-          <div class="ui cancel button">Cancel</div>
-      </div> -->
+        <div class="content">
+          <p>Магазин временно отключен от программы «Заказ на Маркете» из-за проблем качества. Подробности можно найти в увеомлении, которое мы отправили вам по почте.</p>
+        </div>
+      </div>
+
+      <h1 class="ui dividing header">Информационный блок</h1>
 
       <div class="ui card">
-        <i class="close icon"></i>
         <div class="content">
           <div class="header">Магазин отключен от программы из-за проблем качества</div>
         <div class="description">Магазин временно отключен от программы «Заказ на Маркете» из-за проблем качества. Подробности можно найти в увеомлении, которое мы отправили вам по почте.</div>
@@ -242,6 +247,16 @@
       <div class="ux hidden divider"></div>
       <div class="ux hidden divider"></div>
       <div class="ux hidden divider"></div>
+
+  <h1 class="ui dividing header">Попап</h1>
+
+  <a class="questionBtn popupBtn"></a>
+
+  <div class="ui special popup">
+    <p>Для ИП — адрес указанный в форме для регистрации</>
+  </div>
+
+  <div style="height:200px;"></div>
 </div>
 
 <script>
@@ -251,10 +266,24 @@ $('.ui.dropdown')
 $('.ui.checkbox')
   .checkbox()
 ;
-// $('.ui.modal')
-//   .modal('attach events', '.test.button'§, 'show')
-// ;
+$('.popupBtn')
+  .popup({
+    inline: true
+  })
+;
+$('.special.popup')
+  // default everything
+  .transition()
+;
+
+$('.ui.modal')
+  .modal({
+     closable: true
+  })
+  .modal('attach events', '.modalBtn', 'show')
+;
 </script>
+
 </body>
 
 </html>
