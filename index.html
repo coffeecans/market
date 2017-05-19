@@ -9,7 +9,7 @@
   <!-- Site Properties -->
   <title>Yandex Market Partner</title>
 
-<link rel="stylesheet" type="text/css" href="assets/css/transition.css">
+
   <link rel="stylesheet" type="text/css" href="assets/css/grid.css">
   <link rel="stylesheet" type="text/css" href="assets/css/form.css">
   <link rel="stylesheet" type="text/css" href="assets/css/label.css">
@@ -21,7 +21,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/icon.css">
   <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
 
+
   <link rel="stylesheet" type="text/css" href="assets/css/market.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/transition.css">
 
   <script src="assets/library/jquery.min.js"></script>
   <script src="assets/js/semantic.js"></script>
@@ -266,22 +268,21 @@ $('.ui.dropdown')
 $('.ui.checkbox')
   .checkbox()
 ;
-$('.popupBtn')
-  .popup({
-    inline: true
-  })
-;
-$('.special.popup')
-  // default everything
-  .transition()
-;
-
 $('.ui.modal')
   .modal({
      closable: true
   })
   .modal('attach events', '.modalBtn', 'show')
 ;
+$('.popupBtn')
+  .popup({
+    // inline: true
+  })
+;
+// $('.special.popup')
+//   // default everything
+//   .transition()
+// ;
 </script>
 
 </body>
